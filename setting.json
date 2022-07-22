@@ -1,7 +1,7 @@
 {
     "TOKEN": "input your key:D",
-    "GAME": "ㄉㄐㄉㄍㄍ",
-    "ANS": "斷交斷光光",
-    "ROLE": "ㄉㄐㄉㄍㄍ",
-    "CANCEL": "不要ㄉㄐ"
+    "GAME": "channel name",
+    "ANS": "1A2B answer",
+    "ROLE": "ROLE name",
+    "CANCEL": "cancel's code"
 }

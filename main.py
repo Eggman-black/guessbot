@@ -16,13 +16,13 @@ async def on_message(msg):
     use = [0,0,0,0,0]
     a = 0
     b = 0
-    if(len(t) == 5 and str(msg.channel) == data["GAME"] and msg.author != bot.user and t[0] != '!'):
-        for i in range(5):
+    if(len(t) == len(data["GAME"]) and str(msg.channel) == data["GAME"] and msg.author != bot.user and t[0] != '!'):
+        for i in range(len(data["GAME"])):
             if t[i] == ans[i]:
                 a+=1
                 use[i] = 1
-        for i in range(5):
-            for j in range(5):
+        for i in range(len(data["GAME"])):
+            for j in range(len(data["GAME"])):
                 if t[j] == ans[i] and not use[j]:
                     b+=1
                     use[j] = 1
@@ -45,7 +45,7 @@ async def on_message(msg):
             await msg.author.add_roles(role)
         elif(a>0 or b > 0):
             await msg.delete(delay = 0.5)
-    elif (len(t) == 4 and str(msg.channel) == data["GAME"] and msg.author != bot.user and t[0] != '!'):
+    elif (len(t) == len(data["CANCEL"]) and str(msg.channel) == data["GAME"] and msg.author != bot.user and t[0] != '!'):
         if(t == data["CANCEL"]):
             await msg.delete(delay = 0.5)
             role_name = data["ROLE"]
